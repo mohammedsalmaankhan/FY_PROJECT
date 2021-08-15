@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">Patient Identification System</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="/services" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+						Services
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<li><a class="dropdown-item" href="{% url 'add_patient' %}">New Patient</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="{% url 'add_photos' %}">Add Photos</a></li>
+						<li><hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="{% url 'check_medical' %}">Add Medical History</a></li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'identify' %}">Get Patient Details</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'heart_pred' %}">Predict Heart Disease</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'diabetes' %}">Predict Diabetes</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'train' %}">Train Model</a>
+				</li>
+
+			</ul>
+
+		</div>
+	</div>
+</nav>
+{% endblock %}

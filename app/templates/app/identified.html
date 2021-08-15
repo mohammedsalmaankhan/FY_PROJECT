@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+{% include 'nav.html' %}
+
+
+<div class="container" style="background-image: url('https://images.unsplash.com/photo-1518186285589-2f7649de83e0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80'); padding: 150px; margin-top: 10px;
+	height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;">
+  <li class="list-group-item">PID: {{Patient.id}} </li>
+  <li class="list-group-item">Patient Name: {{Patient.name}}</li>
+  <li class="list-group-item">Gender : {{Patient.gender}}</li>
+  <li class="list-group-item">Aadhar Number: {{Patient.Aadhar_num}}</li>
+  <li class="list-group-item">Contact Number: {{Patient.contact_number}}</li>
+  <li class="list-group-item">Date Of Birth: {{Patient.date_of_birth}} </li>
+  <li class="list-group-item">Email: {{Patient.email}}</li>
+	<li class="list-group-item">Blood group: {{Medical.blood_group}}</li>
+	<li class="list-group-item">Height: {{Medical.height}}</li>
+	<li class="list-group-item">Weight: {{Medical.weight}}</li>
+	<li class="list-group-item">Medical Conditions : {{Medical.medical_condition1}} {{Medical.medical_condition2}} {{Medical.medical_condition3}}</li>
+
+	</div>
+
+
+{% endblock %}
